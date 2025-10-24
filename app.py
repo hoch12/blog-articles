@@ -8,7 +8,7 @@ def load_articles():
     articles = []
     with open('articles.jsonl', 'r', encoding='utf-8') as f:
         for i, line in enumerate(f):
-            if i >= 100000:  # pro test zobrazíme jen 100 článků
+            if i >= 100:  # pro test zobrazíme jen 100 článků
                 break
             data = json.loads(line)
             articles.append(data)
